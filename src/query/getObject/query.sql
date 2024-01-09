@@ -1,0 +1,14 @@
+with A as (
+    SELECT 1 as id1, 1 as id2, 1 as id3
+)
+SELECT id1, id2, id3 FROM A
+UNION ALL
+SELECT id1, id2, id3+1 FROM A
+UNION ALL
+SELECT id1, id2+1, id3 FROM A
+UNION ALL
+SELECT id1+1, id2+1, id3+1 FROM A
+UNION ALL
+SELECT id1+1, id2, id3+1 FROM A
+UNION ALL
+SELECT id1+1, id2+1, id3 FROM A
